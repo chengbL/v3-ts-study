@@ -8,15 +8,19 @@
 // 4. 定义好枚举后，直接使用枚举名称作为类型注解
 
 enum State {
-  success = 200,
-  failed = 400,
-  modefied = 300
+  success = 2,
+  modefied,
+  failed
 }
 
 const request = {
   id: 1,
   usd: 'cbn',
-  state: State.success
+  state: State.modefied
 }
 
 console.log(request)
+
+// 枚举中无初始值那么会有默认值
+// 第一项的默认值是0
+// 第二项开始，会根据上一项的值+1
