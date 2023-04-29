@@ -1,13 +1,5 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-import Son from './components/Son.vue'
-const money = ref(1000)
-const car = ref('宝马')
-</script>
+<script setup lang="ts"></script>
 
-<template>
-  <div>
-    {{ money }} -- {{ car }}
-    <Son :money="money"></Son>
-  </div>
-</template>
+<template></template>
+
+<style scoped></style>

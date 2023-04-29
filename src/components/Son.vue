@@ -27,7 +27,18 @@ const { money = 1000, car = '迈凯伦' } = defineProps<{
   money: number
   car?: string // 非必传
 }>()
+
+const emit = defineEmits<{
+  (event: 'add', num: number): void
+  (event: 'changeCar', str: string): void
+}>()
 </script>
 <template>
-  <div>{{ money }}---{{ car }}</div>
+  <div>
+    <div>{{ money }} --- {{ car }}</div>
+    <button style="margin-top: 20px" @click="emit('add', 1000)">
+      点我改变money
+    </button>
+    <button @click="emit('changeCar', '玛莎拉蒂mc20')">点我改变car</button>
+  </div>
 </template>
